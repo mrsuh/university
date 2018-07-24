@@ -1,0 +1,9 @@
+{
+  "require": {
+    "paquettg/php-html-parser": "^1.7",
+    "symfony/dom-crawler": "^4.1",
+    "symfony/css-selector": "^4.1",
+    "gufy/pdftohtml-php": "~2",
+    "twig/twig": "^2.0"
+  }
+}

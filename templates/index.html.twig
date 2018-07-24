@@ -1,0 +1,38 @@
+{% if statistic_spbtsu %}
+    <h3>СПбПУ</h3>
+    <b>URL: </b><a href="http://www.spbstu.ru/abit/admission-campaign/general/abiturients/" target="_blank">link</a>
+    <b>Время обновления: </b> {{ statistic_spbtsu.datetime | 'Y-m-d H:i:s' }}
+    <b>Индекс по баллам: </b> {{ statistic_spbtsu.indexByPoints }}
+    <b>Точно
+        приняты: </b> {{ statistic_spbtsu.acceptAndDocumentOriginalCount - statistic_spbtsu.documentOriginalAndOtherWayCount }}
+    <b>Согласились: </b> {{ statistic_spbtsu.acceptCount }}
+    <b>Согласились и подали оригиналы документов: </b> {{ statistic_spbtsu.acceptAndDocumentOriginalCount }}
+    <b>Подали оригиналы документов: </b> {{ statistic_spbtsu.documentOriginalCount }}
+    <b>Отказались: </b> {{ statistic_spbtsu.otherWayCount }}
+{% endif %}
+
+{% if statistic_unecon_m %}
+    <h3>СПБГЭУ менеджмент</h3>
+    <b>URL: </b><a href="http://www.spbstu.ru/abit/admission-campaign/general/abiturients/" target="_blank">link</a>
+    <b>Время обновления: </b> {{ statistic_unecon_m.datetime | 'Y-m-d H:i:s' }}
+    <b>Индекс по баллам: </b> {{ statistic_unecon_m.indexByPoints }}
+    <b>Точно
+        приняты: </b> {{ statistic_unecon_m.acceptAndDocumentOriginalCount - statistic_unecon_m.documentOriginalAndOtherWayCount }}
+    <b>Согласились: </b> {{ statistic_spbtsu.acceptCount }}
+    <b>Согласились и подали оригиналы документов: </b> {{ statistic_unecon_m.acceptAndDocumentOriginalCount }}
+    <b>Подали оригиналы документов: </b> {{ statistic_unecon_m.documentOriginalCount }}
+    <b>Отказались: </b> {{ statistic_unecon_m.otherWayCount }}
+{% endif %}
+
+{% if statistic_unecon_p %}
+    <h3>СПБГЭУ управление персоналом</h3>
+    <b>URL: </b><a href="http://www.spbstu.ru/abit/admission-campaign/general/abiturients/" target="_blank">link</a>
+    <b>Время обновления: </b> {{ statistic_unecon_p.datetime | 'Y-m-d H:i:s' }}
+    <b>Индекс по баллам: </b> {{ statistic_unecon_p.indexByPoints }}
+    <b>Точно
+        приняты: </b> {{ statistic_unecon_p.acceptAndDocumentOriginalCount - statistic_unecon_p.documentOriginalAndOtherWayCount }}
+    <b>Согласились: </b> {{ statistic_unecon_p.acceptCount }}
+    <b>Согласились и подали оригиналы документов: </b> {{ statistic_unecon_p.acceptAndDocumentOriginalCount }}
+    <b>Подали оригиналы документов: </b> {{ statistic_unecon_p.documentOriginalCount }}
+    <b>Отказались: </b> {{ statistic_unecon_p.otherWayCount }}
+{% endif %}
