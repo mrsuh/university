@@ -4,7 +4,7 @@
 $loader = require(__DIR__ . '/../vendor/autoload.php');
 
 $loader = new Twig_Loader_Array([
-    'index' => file_get_contents(__DIR__ . '/../tempaltes/index.html.twig'),
+    'index' => file_get_contents(__DIR__ . '/../templates/index.html.twig'),
 ]);
 $twig   = new Twig_Environment($loader);
 
