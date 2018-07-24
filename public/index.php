@@ -2,6 +2,7 @@
 
 /** @var \Composer\Autoload\ClassLoader $autoload */
 $loader = require(__DIR__ . '/../vendor/autoload.php');
+$loader->add('University', __DIR__ . '/../src');
 
 $loader = new Twig_Loader_Array([
     'index' => file_get_contents(__DIR__ . '/../templates/index.html.twig'),
