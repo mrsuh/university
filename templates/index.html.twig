@@ -17,8 +17,10 @@
                 <td>Название</td>
                 <td>URL</td>
                 <td>Время обновления</td>
-                <td>Индекс по баллам</td>
+                <td>Позиция по баллам</td>
+                <td>Всего бюджетных мест (кол.)</td>
                 <td>Точно приняты (кол.) (подали оригиналы документов - отказались с оригиналами документов</td>
+                <td>Осталось бюджетный мест (кол.) (Всего бюджетных мест - Точно приняты)</td>
                 <td>Согласились (кол.)</td>
                 <td>Подали оригиналы документов (кол.)</td>
                 <td>Согласились и подали оригиналы документов (кол.)</td>
@@ -33,8 +35,10 @@
                     <td><a href="http://www.spbstu.ru/abit/admission-campaign/general/abiturients/" target="_blank">link</a></td>
                     <td>{{ statistic_spbtsu.datetime ? statistic_spbtsu.datetime | date('Y-m-d H:i:s') : '' }}</td>
                     <td>{{ statistic_spbtsu.indexByPoints }}</td>
+                    <td>67</td>
                     {% set accepted = statistic_spbtsu.documentOriginalCount - statistic_spbtsu.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
+                    <td>{{ 67 - (accepted > 0 ? accepted : 0) }}</td>
                     <td>{{ statistic_spbtsu.acceptCount }}</td>
                     <td>{{ statistic_spbtsu.documentOriginalCount }}</td>
                     <td>{{ statistic_spbtsu.acceptAndDocumentOriginalCount }}</td>
@@ -48,8 +52,10 @@
                     <td><a href="https://priem.unecon.ru/stat/stat_konkurs.php?y=2018&filial_kod=1&zayav_type_kod=1&obr_konkurs_kod=0&recomend_type=null&rec_status_kod=all&ob_forma_kod=1&ob_osnova_kod=1&konkurs_grp_kod=3025&prior=1&status_kod=all&is_orig_doc=all&has_agreement=all&orig_doc_d=all&show=%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20https://priem.unecon.ru/stat/stat_konkurs.php?" target="_blank">link</a></td>
                     <td>{{ statistic_unecon_m.datetime ? statistic_unecon_m.datetime | date('Y-m-d H:i:s') : '' }}</td>
                     <td>{{ statistic_unecon_m.indexByPoints }}</td>
+                    <td>140</td>
                     {% set accepted = statistic_unecon_m.documentOriginalCount - statistic_unecon_m.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
+                    <td>{{ 140 - (accepted > 0 ? accepted : 0) }}</td>
                     <td>{{ statistic_unecon_m.acceptCount }}</td>
                     <td>{{ statistic_unecon_m.documentOriginalCount }}</td>
                     <td>{{ statistic_unecon_m.acceptAndDocumentOriginalCount }}</td>
@@ -63,8 +69,10 @@
                     <td><a href="https://priem.unecon.ru/stat/stat_konkurs.php?y=2018&filial_kod=1&zayav_type_kod=1&obr_konkurs_kod=0&recomend_type=null&rec_status_kod=all&ob_forma_kod=1&ob_osnova_kod=1&konkurs_grp_kod=3026&prior=3&status_kod=all&is_orig_doc=all&has_agreement=all&orig_doc_d=all&show=%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20https://priem.unecon.ru/stat/stat_konkurs.php?y=2018&filial_kod=1&zayav_type_kod=1&obr_konkurs_kod=0&recomend_type=null&rec_status_kod=all&ob_forma_kod=1&ob_osnova_kod=1&konkurs_grp_kod=3051&prior=2&status_kod=all" target="_blank">link</a></td>
                     <td>{{ statistic_unecon_p.datetime ? statistic_unecon_p.datetime | date('Y-m-d H:i:s') : '' }}</td>
                     <td>{{ statistic_unecon_p.indexByPoints }}</td>
+                    <td>18</td>
                     {% set accepted = statistic_unecon_p.documentOriginalCount - statistic_unecon_p.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
+                    <td>{{ 18 - (accepted > 0 ? accepted : 0) }}</td>
                     <td>{{ statistic_unecon_p.acceptCount }}</td>
                     <td>{{ statistic_unecon_p.documentOriginalCount }}</td>
                     <td>{{ statistic_unecon_p.acceptAndDocumentOriginalCount }}</td>
