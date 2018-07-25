@@ -38,7 +38,8 @@
                     <td>67</td>
                     {% set accepted = statistic_spbtsu.documentOriginalCount - statistic_spbtsu.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
-                    <td>{{ 67 - (accepted > 0 ? accepted : 0) }}</td>
+                    {% set free = 67 - accepted %}
+                    <td>{{ free > 0 ? free : 0 }}</td>
                     <td>{{ statistic_spbtsu.acceptCount }}</td>
                     <td>{{ statistic_spbtsu.documentOriginalCount }}</td>
                     <td>{{ statistic_spbtsu.acceptAndDocumentOriginalCount }}</td>
@@ -55,7 +56,8 @@
                     <td>140</td>
                     {% set accepted = statistic_unecon_m.documentOriginalCount - statistic_unecon_m.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
-                    <td>{{ 140 - (accepted > 0 ? accepted : 0) }}</td>
+                    {% set free = 140 - accepted %}
+                    <td>{{ free > 0 ? free : 0 }}</td>
                     <td>{{ statistic_unecon_m.acceptCount }}</td>
                     <td>{{ statistic_unecon_m.documentOriginalCount }}</td>
                     <td>{{ statistic_unecon_m.acceptAndDocumentOriginalCount }}</td>
@@ -72,7 +74,8 @@
                     <td>18</td>
                     {% set accepted = statistic_unecon_p.documentOriginalCount - statistic_unecon_p.documentOriginalAndOtherWayCount %}
                     <td>{{ accepted > 0 ? accepted : 0 }}</td>
-                    <td>{{ 18 - (accepted > 0 ? accepted : 0) }}</td>
+                    {% set free = 18 - accepted %}
+                    <td>{{ free > 0 ? free : 0 }}</td>
                     <td>{{ statistic_unecon_p.acceptCount }}</td>
                     <td>{{ statistic_unecon_p.documentOriginalCount }}</td>
                     <td>{{ statistic_unecon_p.acceptAndDocumentOriginalCount }}</td>
